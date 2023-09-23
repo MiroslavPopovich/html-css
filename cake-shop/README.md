@@ -1,1 +1,1 @@
-HTML-CSS project
+HTML-CSS CakeShop project
