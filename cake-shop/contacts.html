@@ -29,7 +29,6 @@
                     </li>
                 </ul>
             </nav>
-
             <figure>
                 <img
                     src="./img/cake_and_drinks_contact_us.png"
@@ -43,8 +42,59 @@
                 </figcaption>
             </figure>
         </header>
+        <hr />
         <main>
             <!--Our content-->
+            <section>
+                <h2>Our contact form</h2>
+                <form action="http://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>Send Us A Massage</legend>
+                        <p>
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                polaceholder="Your name"
+                                required
+                            />
+                        </p>
+                        <p>
+                            <label for="name">Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                polaceholder="Your email"
+                                required
+                            />
+                        </p>
+                        <p>
+                            <label for="massage">Your Massage:</label>
+                            <br />
+                            <textarea
+                                name="massage"
+                                id="massage"
+                                cols="30"
+                                rows="10"
+                                placeholder="Type your massage here"
+                            ></textarea>
+                        </p>
+                    </fieldset>
+                    <button type="submit">Send</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </section>
+            <section>
+                <h2>Our Location</h2>
+                <address>
+                    4 Cake street <br />
+                    London <br />
+                    LL4 4LL <br />
+                    Phone: <a href="tel:+44444444444">4444 4444 444</a>
+                </address>
+            </section>
         </main>
         <hr />
         <footer>
