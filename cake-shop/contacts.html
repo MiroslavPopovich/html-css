@@ -11,14 +11,14 @@
     </head>
     <body>
         <header class="head">
-            <h1 class="header__h1">Contact Us</h1>
+            <h1 class="header__h1">The Cake Shop</h1>
             <nav class="header__nav">
                 <ul class="header__ul">
                     <li>
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="#menu">Menu</a>
+                        <a href="/#menu">Menu</a>
                     </li>
                     <li>
                         <a href="hours.html">Hours</a>
@@ -45,8 +45,8 @@
         </section>
         <main class="main">
             <!--Our content-->
-            <article class="main__article">
-                <h2>Our Location</h2>
+            <article class="main__article contact">
+                <h2 class="contact__h2">Our Location</h2>
                 <address>
                     4 Cake street <br />
                     London <br />
@@ -54,14 +54,21 @@
                     Phone: <a href="tel:+44444444444">4444 4444 444</a>
                 </address>
             </article>
-            <article class="main__article">
-                <h2>Our contact form</h2>
-                <form action="http://httpbin.org/get" method="get">
-                    <fieldset>
-                        <legend>Send Us A Massage</legend>
-                        <p>
-                            <label for="name">Name</label>
+            <article class="main__article contact">
+                <h2 class="contact__h2">Our contact form</h2>
+                <form
+                    action="http://httpbin.org/get"
+                    method="get"
+                    class="contact_form"
+                >
+                    <fieldset class="contact__fieldset">
+                        <legend class="offscreen">Send Us A Massage</legend>
+                        <p class="contact__p">
+                            <label class="contact__label" for="name">
+                                Name
+                            </label>
                             <input
+                                class="contact__input"
                                 type="text"
                                 name="name"
                                 id="name"
@@ -69,9 +76,12 @@
                                 required
                             />
                         </p>
-                        <p>
-                            <label for="name">Email</label>
+                        <p class="contact__p">
+                            <label class="contact__label" for="name">
+                                Email
+                            </label>
                             <input
+                                class="contact__input"
                                 type="email"
                                 name="email"
                                 id="email"
@@ -79,10 +89,12 @@
                                 required
                             />
                         </p>
-                        <p>
-                            <label for="massage">Your Massage:</label>
-                            <br />
+                        <p class="contact__p">
+                            <label class="contact__label" for="massage">
+                                Your Massage:
+                            </label>
                             <textarea
+                                class="contact__textarea"
                                 name="massage"
                                 id="massage"
                                 cols="30"
@@ -91,8 +103,8 @@
                             ></textarea>
                         </p>
                     </fieldset>
-                    <button type="submit">Send</button>
-                    <button type="reset">Reset</button>
+                    <button class="contact__buttons" type="submit">Send</button>
+                    <button class="contact__buttons" type="reset">Reset</button>
                 </form>
             </article>
         </main>
