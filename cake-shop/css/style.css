@@ -30,21 +30,21 @@ textarea {
     --FS: clamp(1rem, 2.2vh, 1.5rem);
 
     /* COLORS */
-    --BGCOLOR: orange;
     --BGCOLOR-FADE: rgb(252, 220, 160);
+    --BGCOLOR: orange;
     --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
     --BODY-BGCOLOR: #fff;
-    --FONT-COLOR: #000;
     --BORDER-COLOR: #333;
-    --HIGHLIGHT-COLOR: #3d86b1;
-    --LINK-COLOR: #000;
-    --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
-    --LINK-ACTIVE: orange;
+    --FONT-COLOR: #000;
     --HEADER_BGCOLOR: #000;
     --HEADER-COLOR: #fff;
-    --NAV-BGCOLOR: #fff;
     --HERO-BGCOLOR: rgba(61, 134, 177, 0.75);
     --HERO-COLOR: #fff;
+    --HIGHLIGHT-COLOR: #3d86b1;
+    --LINK-ACTIVE: orange;
+    --LINK-COLOR: #000;
+    --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
+    --NAV-BGCOLOR: #fff;
 
     /* BORDERS */
     --BORDERS: 1px solid var(--BORDER-COLOR);
@@ -58,6 +58,23 @@ textarea {
     --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BGCOLOR-FADE: #6b6a58;
+        --BGCOLOR: #5d5e59;
+        --BODY-BGCOLOR: #333;
+        --FONT-COLOR: #69583c;
+        --HEADER-COLOR: whitesmoke;
+        --HERO-COLOR: whitesmoke;
+        --LINK-COLOR: whitesmoke;
+        --LINK-HOVER: #3d86b1;
+        --NAV-BGCOLOR: #333;
+    }
+    .contact__input,
+    .contact__textarea {
+        background-color: #333;
+    }
+}
 /* || UTILITY CLASSES */
 
 .offscreen {
@@ -348,4 +365,21 @@ thead th:last-child {
 tfoot td {
     border-bottom-left-radius: var(--BORDER-RADIOS);
     border-bottom-right-radius: var(--BORDER-RADIOS);
+}
+
+@media screen and (min-width: 576px) {
+    .header__h1::before {
+        content: "🧁 ";
+    }
+    .header__h1::after {
+        content: " 🧁";
+    }
+
+    .menu__header,
+    .menu__ch,
+    .menu__fc,
+    .menu__p,
+    .menu__tc {
+        font-size: 125%;
+    }
 }
