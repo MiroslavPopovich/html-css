@@ -300,4 +300,147 @@ main .container {
 
 /* | END MAIN-LEFT */
 
+/* | MAIN-CENTER */
+
+/* || MAIN-CENTER STORIES*/
+.center .stories {
+    display: flex;
+    justify-content: space-between;
+    height: 12rem;
+    gap: 0.5rem;
+}
+
+.center .story {
+    padding: var(--PADDING-CARD);
+    border-radius: var(--BORDER-RADIOS-CARD);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 8rem;
+    color: white;
+    font-size: 0.75rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.center .story .story-background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.center .story .story-background::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    position: absolute;
+    bottom: 0;
+}
+
+.center .story .story-background img {
+    width: 100%;
+    height: 100%;
+}
+
+.center .story .profile-picture,
+.center .story p {
+    z-index: 1;
+}
+
+.center .story .profile-picture {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--BGCOLOR-PRIMARY);
+}
+/* || END MAIN-CENTER STORIES*/
+
+/* || MAIN-CENTER CREATE-POST*/
+.center .create-post {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background-color: var(--BGCOLOR-WHITE);
+    padding: 0.4rem var(--PADDING-CARD);
+    border-radius: var(--BORDER-RADIOS);
+}
+
+.center .create-post input[type="text"] {
+    background-color: transparent;
+    width: 100%;
+    padding-left: 1rem;
+    columns: var(--FONT-COLOR-DARK);
+    margin-right: 1rem;
+}
+
+/* || END MAIN-CENTER CREATE-POST*/
+
+/* || MAIN-CENTER FEEDS*/
+
+.center .feeds .feed {
+    background-color: var(--BGCOLOR-WHITE);
+    border-radius: var(--BORDER-RADIOS-CARD);
+    padding: var(--PADDING-CARD);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+}
+
+.center .feeds .feed .head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.center .feeds .feed .head .user {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+}
+
+.center .feeds .feed .photo {
+    border-radius: var(--BORDER-RADIOS-CARD);
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
+
+.center .feeds .feed .action-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0.6rem;
+}
+
+.center .feeds .feed .liked-by {
+    display: flex;
+}
+
+.center .feeds .feed .liked-by span {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--BGCOLOR-LIGHT);
+    margin-left: -0.6rem;
+}
+
+.center .feeds .feed .liked-by span:first-child {
+    margin-left: 0;
+}
+
+.center .feeds .feed .liked-by p {
+    margin-left: 0.6rem;
+}
+
+/* || END MAIN-CENTER FEEDS*/
+
+/* | END MAIN-CENTER */
+
 /* END MAIN*/
