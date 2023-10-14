@@ -443,4 +443,126 @@ main .container {
 
 /* | END MAIN-CENTER */
 
+/* | MAIN-RIGHT */
+
+.right {
+    max-width: 30rem;
+    height: max-content;
+    position: sticky;
+    top: var(--TOP-RIGHT);
+    bottom: 0;
+}
+
+/* || MAIN-RIGHT MESSAGES */
+.right .messages {
+    background-color: var(--BGCOLOR-WHITE);
+    border-radius: var(--BORDER-RADIOS-CARD);
+    padding: var(--PADDING-CARD);
+}
+
+.right .messages .headings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right .messages .headings i {
+    font-size: 1.2rem;
+}
+
+.right .messages .search-bar {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.right .messages .category {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right .messages .category h6 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 4px solid var(--BGCOLOR-LIGHT);
+    padding-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.right .messages .category .active {
+    border-color: var(--FONT-COLOR-DARK);
+}
+
+.right .messages .category .message-requests {
+    color: var(--BGCOLOR-PRIMARY);
+}
+
+.right .messages .message {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: start;
+}
+
+.right .messages .message p {
+    font-size: 0.85rem;
+}
+
+.right .messages .message:last-child {
+    margin: 0;
+}
+
+.right .messages .message .profile-picture {
+    position: relative;
+    overflow: visible;
+}
+
+.right .messages .message .profile-picture img {
+    border-radius: 50%;
+}
+.right .messages .message .profile-picture .active {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 3px solid var(--BGCOLOR-WHITE);
+    background-color: var(--BGCOLOR-GREEN);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* || END MAIN-RIGHT MESSAGES */
+
+/* || MAIN-RIGHT FRIEND-REQUEST */
+.right .friend-request {
+    margin-top: 1rem;
+}
+
+.right .friend-request h4 {
+    color: var(--FONT-COLOR-GRAY);
+    margin: 1rem 0;
+}
+
+.right .friend-request .request {
+    background-color: var(--BGCOLOR-WHITE);
+    border-radius: var(--BORDER-RADIOS-CARD);
+    padding: var(--PADDING-CARD);
+    margin-bottom: 0.7rem;
+}
+
+.right .friend-request .request .info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.right .friend-request .request .action {
+    display: flex;
+    gap: 1rem;
+}
+/* || END MAIN-RIGHT FRIEND-REQUEST */
+
+/* | END MAIN-RIGHT */
+
 /* END MAIN*/
