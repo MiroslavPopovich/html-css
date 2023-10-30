@@ -130,6 +130,120 @@ body > div {
     height: 2.5rem;
 }
 
+/* ------------ SHAPE-4 ------------ */
+.shape-4 {
+    background-color: #0c242a;
+}
+
+.shape-4 span:nth-child(1) {
+    width: 8rem;
+    height: 8rem;
+    background-color: #9a833d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.shape-4 span:nth-child(1)::before,
+.shape-4 span:nth-child(1)::after {
+    content: "";
+    width: 4rem;
+    height: 4rem;
+    background-color: #9a833d;
+    transform: rotate(45deg);
+    position: absolute;
+}
+.shape-4 span:nth-child(1)::before {
+    left: -0.8rem;
+}
+.shape-4 span:nth-child(1)::after {
+    right: -0.8rem;
+}
+
+.shape-4 span:nth-child(2) {
+    width: 7rem;
+    height: 7rem;
+    background-color: #f6ad4a;
+    position: absolute;
+    border-radius: 50%;
+    border: 0.8rem solid #0e2229;
+}
+.shape-4 span:nth-child(3) {
+    width: 2rem;
+    height: 2rem;
+    background-color: #373e3f;
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* ------------ SHAPE-5 ------------ */
+.shape-5 {
+    background-color: #181818;
+}
+
+.shape-5 div {
+    width: 8rem;
+    height: 12rem;
+    background-color: #9a833d;
+    border-radius: 4rem 4rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    position: relative;
+}
+
+.shape-5 div span {
+    background-color: #0c242a;
+    height: 1rem;
+    width: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.shape-5 div span:nth-child(1) {
+    width: 2.4rem;
+    margin-bottom: 3.3rem;
+}
+.shape-5 div span:nth-child(2) {
+    width: 3.8rem;
+    margin-bottom: 2.2rem;
+}
+.shape-5 div span:nth-child(3) {
+    width: 5.4rem;
+    margin-bottom: 1.1rem;
+}
+.shape-5 div span:nth-child(4) {
+    width: 6.6rem;
+}
+
+/* ------------ SHAPE-6 ------------ */
+
+.shape-6 {
+    background-color: #322221;
+    flex-direction: column;
+}
+
+.shape-6 span:nth-child(1) {
+    width: 3rem;
+    height: 3rem;
+    background-color: #9a833d;
+    border-radius: 2rem 2rem 0 0;
+    margin-bottom: -1.4rem;
+}
+.shape-6 span:nth-child(2) {
+    width: 8rem;
+    height: 5rem;
+    background-color: #7e4924;
+    border-radius: 4rem 4rem 1rem 1rem;
+}
+.shape-6 span:nth-child(3) {
+    width: 6rem;
+    height: 6rem;
+    background-color: #4a6a61;
+    border-radius: 0 0 2.5rem 2.5rem;
+}
+
 @media screen and (max-width: 992px) {
     body {
         grid-template-columns: repeat(3, 1fr);
