@@ -244,6 +244,174 @@ body > div {
     border-radius: 0 0 2.5rem 2.5rem;
 }
 
+/* ------------ SHAPE-7 ------------ */
+
+.shape-7 {
+    background-color: #263157;
+}
+
+.shape-7 div {
+    width: 10rem;
+    height: 10rem;
+    background-color: #f56762;
+    border-radius: 5rem 5rem 3rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+    position: relative;
+    overflow: hidden;
+}
+
+.shape-7 div span {
+    background-color: #e4d9b3;
+}
+.shape-7 div span:nth-child(1),
+.shape-7 div span:nth-child(2) {
+    width: 8rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-top: -2.4rem;
+}
+
+.shape-7 div span:nth-child(3),
+.shape-7 div span:nth-child(4) {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.shape-7 div span:nth-child(3) {
+    margin-left: 3.4rem;
+}
+.shape-7 div span:nth-child(4) {
+    margin-left: -3.4rem;
+}
+.shape-7 div span:nth-child(5) {
+    width: 3rem;
+    height: 0.7rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    bottom: 1.5rem;
+}
+
+/* ------------ SHAPE-8 ------------ */
+
+.shape-8 {
+    background-color: #887436;
+}
+
+.shape-8 div:nth-child(2) {
+    width: 8rem;
+    height: 8rem;
+    background-color: #163937;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.shape-8 div:nth-child(2) span {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #163937;
+    border: 0.55rem solid #887436;
+}
+.shape-8 div:nth-child(2)::before {
+    content: "";
+    width: 80%;
+    height: 1.2rem;
+    background-color: #163937;
+    position: absolute;
+    top: 35%;
+}
+
+.shape-8 div:nth-child(2)::after {
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    bottom: -3rem;
+    border-radius: 50%;
+    border: 0.8rem solid transparent;
+    border-top-color: white;
+    border-left-color: white;
+    transform: rotate(45deg);
+}
+
+.shape-8 div:nth-child(3),
+.shape-8 div:nth-child(1) {
+    position: relative;
+    width: 3rem;
+    height: 8rem;
+    background-color: #163937;
+    border-radius: 50%;
+}
+.shape-8 div:nth-child(3)::before,
+.shape-8 div:nth-child(1)::before {
+    content: "";
+    width: 82%;
+    height: 100%;
+    background-color: #0a1f24;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+}
+.shape-8 div:nth-child(3)::before {
+    left: 0;
+}
+
+.shape-8 div:nth-child(2) span:nth-child(3) {
+    width: 1.7rem;
+    height: 8rem;
+    background-color: #163937;
+    position: absolute;
+    top: 5rem;
+    z-index: 3;
+    border: none;
+    border-radius: 2rem 2rem 1rem 1rem;
+}
+
+/* ------------ SHAPE-9 ------------ */
+.shape-9 {
+    background-color: #273258;
+}
+
+.shape-9 span {
+    width: 12rem;
+    height: 12rem;
+    background-color: #d6cca8;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.shape-9 span::before {
+    content: "";
+    width: 6rem;
+    height: 6rem;
+    background-color: #4a6a61;
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: -3rem;
+}
+
+.shape-9 span::after {
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    background-color: #4a6a61;
+    position: absolute;
+    transform: rotate(45deg);
+    bottom: -3rem;
+    right: 0;
+}
+
 @media screen and (max-width: 992px) {
     body {
         grid-template-columns: repeat(3, 1fr);
