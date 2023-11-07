@@ -412,6 +412,154 @@ body > div {
     right: 0;
 }
 
+/* ------------ SHAPE-10 ------------ */
+
+.shape-10 {
+    background-color: #907b39;
+    flex-direction: column;
+}
+
+.shape-10 div:first-child {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+}
+
+.shape-10 div:first-child::after {
+    content: "";
+    width: 4rem;
+    height: 2rem;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+.shape-10 div:first-child span {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: white;
+}
+.shape-10 div:last-child {
+    width: 8rem;
+    height: 4rem;
+    border-radius: 3rem;
+    background-color: #ebf14f;
+    display: flex;
+    gap: 0.4rem;
+    justify-content: start;
+    position: relative;
+    overflow: hidden;
+}
+
+.shape-10 div:last-child span {
+    background-color: black;
+    height: 100%;
+    width: 1.4rem;
+}
+
+.shape-10 div:last-child span:last-child {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 1rem;
+    top: 0.8rem;
+}
+
+/* ------------ SHAPE-11 ------------ */
+.shape-11 {
+    background-color: #212a4b;
+}
+
+.shape-11 div:nth-child(2) {
+    background-color: #bdb494;
+    width: 6rem;
+    height: 4rem;
+    border-radius: 0 0 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 0 0.8rem;
+}
+
+.shape-11 div:nth-child(2) span {
+    background-color: #c74846;
+    width: 1.6rem;
+    height: 0.25rem;
+    border-radius: 5px;
+}
+.shape-11 div:nth-child(2) span:nth-child(1) {
+    margin: 0.4rem 0;
+}
+.shape-11 div:nth-child(2) span:nth-child(3) {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    align-self: end;
+    margin-top: 0.6rem;
+    z-index: 1;
+}
+.shape-11 div:nth-child(1),
+.shape-11 div:nth-child(3) {
+    width: 3.5rem;
+    height: 2.2rem;
+    border: 5px solid #bdb494;
+    margin-top: -1.8rem;
+}
+.shape-11 div:nth-child(1) {
+    border-radius: 1rem 0 0 1rem;
+    margin-right: -1rem;
+}
+
+.shape-11 div:nth-child(3) {
+    border-radius: 0 1rem 1rem 0;
+    margin-left: -1rem;
+}
+
+/* ------------ SHAPE-12 ------------ */
+.shape-12 {
+    background-color: #5074a0;
+    flex-direction: column;
+}
+
+.shape-12 span:first-child {
+    width: 10rem;
+    height: 10rem;
+    border-left: 7rem solid transparent;
+    border-right: 7rem solid transparent;
+    border-bottom: 5rem solid #192d5a;
+    position: relative;
+}
+
+.shape-12 span:first-child::before {
+    content: "";
+    width: 5rem;
+    height: 6px;
+    background-color: #eeb95d;
+    position: absolute;
+    bottom: -5rem;
+    left: calc(50% - 2.5rem);
+}
+.shape-12 span:last-child {
+    width: 10rem;
+    height: 8rem;
+    background-color: #192d5a;
+    position: relative;
+}
+
+.shape-12 span:last-child::after {
+    content: "";
+    width: 3rem;
+    height: 4rem;
+    background-color: #eeb95d;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 1.5rem);
+}
+
 @media screen and (max-width: 992px) {
     body {
         grid-template-columns: repeat(3, 1fr);
