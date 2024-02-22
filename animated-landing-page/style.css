@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+:root {
+    --color-primary: linear-gradient(-20deg, #f44a07, #ff8731);
+    --color-light: #ecf0f3;
+    --color-dark: #333;
+    --box-shadow: 0 0 5rem rgba(0, 0, 0, 0.1);
+    --btn-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Anta", sans-serif;
+    background: var(--color-primary);
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Nav */
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem 0;
+}
+
+nav .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 4rem;
+}
+nav a {
+    white-space: nowrap;
+}
+nav ul li:last-child a {
+    background: var(--color-primary);
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    transition: all 300ms ease;
+}
+nav ul li:last-child a:hover {
+    box-shadow: var(--btn-box-shadow);
+    filter: brightness(110%);
+}
+
+/* Content */
+.content {
+    width: 35vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: animateContent 2s 1s ease forwards;
+}
+
+@keyframes animateContent {
+    to {
+        opacity: 1;
+    }
+}
+
+.content .container {
+    margin-left: 5rem;
+    color: var(--color-light);
+    width: 36rem;
+}
+
+.content .container h1 {
+    font-size: 3rem;
+}
+
+.content .container p {
+    margin-top: 2rem;
+    line-height: 1.4;
+}
+.content .container a {
+    background: var(--color-light);
+    padding: 1.2rem 3rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 1.8rem;
+    border-radius: 2rem;
+}
+
+.content .container a:hover {
+    box-shadow: var(--btn-box-shadow);
+    filter: brightness(110%);
+}
+
+/* Background animation */
+.tray {
+    width: 80rem;
+    height: 80rem;
+    background-color: var(--color-light);
+    border-radius: 50%;
+    position: fixed;
+    top: 25rem;
+    right: -29rem;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: animateTray 1s ease forwards;
+}
+
+@keyframes animateTray {
+    to {
+        opacity: 1;
+    }
+}
+
+.plate {
+    position: fixed;
+    top: 8rem;
+    right: 2rem;
+    width: 38rem;
+    height: 38rem;
+    background: var(--color-light);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    animation: animatePlate 10s linear forwards infinite;
+}
+
+@keyframes animatePlate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.plate .food img {
+    width: 100%;
+}
+
+.plate .food {
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+    width: 26rem;
+    height: 26rem;
+}
