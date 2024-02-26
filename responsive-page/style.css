@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Ubuntu&display=swap');
+
+body{
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+header{
+    text-align: center;
+    background: gainsboro;
+    padding: 2em 0;
+}
+
+h1{
+    font-family: "Lora", serif;
+    color: #143774;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.container{
+    width: 90%;
+    /* border: 1px solid green ; */
+    max-width: 1536px;
+    margin: 0 auto;
+    
+}
+
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px){
+    .container-nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+.subtitle{
+    font-weight: 700;
+    color: #1792d2;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.nav-list{
+    padding: 0;
+    /* border: 1px solid magenta; */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.nav-list-item{
+    /* border: 2px dotted orange;  */
+    margin-left: 1.5em;
+}
+
+@media screen and (max-width: 768px){
+    .nav-list-item{
+        margin:0.5em 0.5em;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    .nav-list{
+        flex-direction: column;
+    } 
+}
+
+.nav-link{
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    color: #707070;
+    font-weight: 700;
+    font-size: 0.9rem;
+    /* border: 3px solid green; */
+}
+
+.nav-link::before{
+    position: absolute;
+    display: none;
+    content: "";
+    width: 100%;
+    border-bottom: 2px solid #1792d2;;
+    top:1.2rem
+    
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    color: #1792d2;
+}
+
+.nav-link:focus{
+    cursor:default;
+    filter: brightness(80%);
+}
+
+.nav-link:hover:before,
+.nav-link:focus:before{
+    display: inline-block;
+    
+}
