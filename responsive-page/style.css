@@ -1,42 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body{
     margin: 0;
     font-family: "Ubuntu", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+p{ 
+    margin-top: 0;
 }
 
 header{
     text-align: center;
     background: gainsboro;
+    margin-bottom: 2em;
     padding: 2em 0;
 }
 
-h1{
+footer{
+    text-align: center;
+    background: gainsboro;
+    padding: 1em 0; 
+    
+}
+
+footer p{
     font-family: "Lora", serif;
     color: #143774;
+    margin: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3{
+    font-family: "Lora", serif;
+    font-weight: 400;
+    color: #143774;
+    margin-top: 0;
+}
+
+h1{
     font-size: 2rem;
     margin: 0;
 }
 
-.container{
-    width: 90%;
-    /* border: 1px solid green ; */
-    max-width: 1536px;
-    margin: 0 auto;
-    
+a{
+    color: #1792d2;
 }
 
-.container-nav{
-    display: flex;
-    justify-content: space-between;
+a:hover,
+a:focus{
+    color: #143774;
 }
 
-@media screen and (max-width: 768px){
-    .container-nav{
-        flex-direction: column;
-        align-items: center;
-    }
-    
+strong{
+    font-weight: 700;
 }
 
 .subtitle{
@@ -48,30 +73,95 @@ h1{
     margin: 0;
 }
 
+.article-title{
+    font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info{
+    font-size: 0.875rem;
+}
+
+.article-read-more{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1792d2;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    
+}
+
+.article-read-more:hover,
+.article-read-more:focus{
+    color: #143774;
+    text-decoration:underline;
+}
+
+.article-info{
+    margin: 2em 0;
+}
+
+/* Layout */
+
+
+.container{
+    width: 90%;
+    /* border: 1px solid green ; */
+    max-width: 900px; 
+    /* 900px */
+    margin: 0 auto;
+    
+}
+
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px){
+    .container-flex{
+        flex-direction: row;
+        align-items: start;
+    }
+    
+    main {
+        width: 75%;
+    }
+
+    aside{
+        width: 20%;
+    }
+
+}
+
 .nav-list{
     padding: 0;
     /* border: 1px solid magenta; */
     list-style: none;
     display: flex;
+    flex-direction: column;
     justify-content: center;
    
 }
 
 .nav-list-item{
     /* border: 2px dotted orange;  */
-    margin-left: 1.5em;
+    /* margin-left: 1.5em; */
+    margin:0.5em 0.5em;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
+
     .nav-list-item{
-        margin:0.5em 0.5em;
+        margin:  0 0 0 1.5em;
     }
-
 }
 
-@media screen and (max-width: 576px){
+@media screen and (min-width: 576px){
     .nav-list{
-        flex-direction: column;
+        flex-direction: row;
     } 
 }
 
@@ -108,5 +198,78 @@ h1{
 .nav-link:hover:before,
 .nav-link:focus:before{
     display: inline-block;
+    
+}
+
+/* Articles */
+.article-featured{
+    border-bottom: #707070 1px solid;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-featured .article-image{
+    order: -2;
+}
+
+.article-featured .article-info{
+    order: -1;
+    margin: 2em 0;
+}
+
+.article-recent{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+
+}
+
+.article-recent-main{
+    order: 2;
+}
+.article-recent-secondary{
+    order: 1;
+}
+
+@media screen and (min-width: 576px){
+
+    
+     .article-recent-main{
+        margin-top: -2.5em;
+
+     }
+
+     .article-recent .article-info{
+        text-align: right;
+     }
+
+}
+
+@media screen and (min-width: 768px){
+    .article-recent{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .article-recent-main {
+        width: 65%;
+        margin-top: 0;
+    }
+
+   .article-recent-secondary{
+        width: 28%;
+    }
+
+    .article-image{
+        width: 100%;
+        min-height: 120px;
+        object-fit: cover;
+    }
+    
+    .article-recent .article-info{
+        text-align: left;
+     }
     
 }
